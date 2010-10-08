@@ -1,4 +1,4 @@
-package me.curdle.client;
+package me.curdle.client.login;
 
 import me.curdle.shared.FieldVerifier;
 

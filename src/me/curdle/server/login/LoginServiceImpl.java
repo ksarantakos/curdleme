@@ -1,6 +1,6 @@
-package me.curdle.server;
+package me.curdle.server.login;
 
-import me.curdle.client.LoginService;
+import me.curdle.client.login.LoginService;
 import me.curdle.shared.FieldVerifier;
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 
@@ -8,7 +8,7 @@ import com.google.gwt.user.server.rpc.RemoteServiceServlet;
  * The server side implementation of the RPC service.
  */
 @SuppressWarnings("serial")
-public class GreetingServiceImpl extends RemoteServiceServlet implements LoginService {
+public class LoginServiceImpl extends RemoteServiceServlet implements LoginService {
 
   public String loginServer(String username, String password) throws IllegalArgumentException {
     // Verify that the input is valid.

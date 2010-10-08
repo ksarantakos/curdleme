@@ -1,5 +1,7 @@
 package me.curdle.client;
 
+import me.curdle.client.login.Login;
+
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.user.client.ui.Button;

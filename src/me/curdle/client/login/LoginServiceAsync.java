@@ -1,4 +1,4 @@
-package me.curdle.client;
+package me.curdle.client.login;
 
 import com.google.gwt.user.client.rpc.AsyncCallback;
 
