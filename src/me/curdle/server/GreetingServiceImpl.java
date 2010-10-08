@@ -1,6 +1,6 @@
 package me.curdle.server;
 
-import me.curdle.client.GreetingService;
+import me.curdle.client.LoginService;
 import me.curdle.shared.FieldVerifier;
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 
@@ -8,11 +8,11 @@ import com.google.gwt.user.server.rpc.RemoteServiceServlet;
  * The server side implementation of the RPC service.
  */
 @SuppressWarnings("serial")
-public class GreetingServiceImpl extends RemoteServiceServlet implements GreetingService {
+public class GreetingServiceImpl extends RemoteServiceServlet implements LoginService {
 
-  public String greetServer(String input) throws IllegalArgumentException {
+  public String loginServer(String username, String password) throws IllegalArgumentException {
     // Verify that the input is valid.
-    if (!FieldVerifier.isValidName(input)) {
+    if (!FieldVerifier.isValidName(username)) {
       // If the input is not valid, throw an IllegalArgumentException back to
       // the client.
       throw new IllegalArgumentException("Name must be at least 4 characters long");
@@ -22,10 +22,10 @@ public class GreetingServiceImpl extends RemoteServiceServlet implements Greetin
     String userAgent = getThreadLocalRequest().getHeader("User-Agent");
 
     // Escape data from the client to avoid cross-site script vulnerabilities.
-    input = escapeHtml(input);
+    username = escapeHtml(username);
     userAgent = escapeHtml(userAgent);
 
-    return "Hello, " + input + "!<br><br>I am running " + serverInfo + ".<br><br>It looks like you are using:<br>"
+    return "Hello, " + username + "!<br><br>I am running " + serverInfo + ".<br><br>It looks like you are using:<br>"
         + userAgent;
   }
 

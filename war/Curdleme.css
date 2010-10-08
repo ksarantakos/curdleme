@@ -32,3 +32,16 @@ h1 {
 #closeButton {
   margin: 15px 6px 6px;
 }
+.gwt-Label-Login {
+	color: sienna;
+	font-family: Arial;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: bold;
+}
+.gwt-Checkbox-Login {
+	color: darkkhaki;
+	font-family: Arial;
+	font-size: 10px;
+	font-style: normal;
+}
